@@ -130,6 +130,7 @@ jobs:
         run: |
           cp ${{ matrix.db-backend }}.defconfig lede/defconfig
           cd lede
+          cat feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus-modified.po >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
           ls
           cat defconfig > .config
           make defconfig
